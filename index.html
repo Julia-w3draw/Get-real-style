@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+	<html>
+		<head></head>		
+		<body>
+			<div id='one' style="width: 100%;height: 100%">
+				<div id='two' style='width: 100%; height: 100%'>					
+				</div >
+			</div>
+		</body>
+		
+		<script>
+			function _get_global_style(){
+				var all = document.getElementsByTagName("*");
+				for(var c=0; c<all.length;c++){				
+					all[c].C=window.getComputedStyle(all[c])
+				}
+			}
+			_get_global_style()
+			var elem=document.getElementById('two')
+			alert(elem.C.width)
+		</script>
+	</html>
